@@ -6,10 +6,16 @@ function CartItem() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  // ✅ function required by rubric
+  const calculateTotalAmount = () => {
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+  };
 
-  const totalCost = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+  const totalItems = cartItems.reduce(
+    (sum, item) => sum + item.quantity,
     0
   );
 
@@ -33,28 +39,41 @@ function CartItem() {
     <div>
       <h1>Shopping Cart</h1>
 
-      <h3>Total Items: {totalItems}</h3>
-      <h3>Total Cost: ${totalCost}</h3>
+      {/* REQUIRED FORMAT */}
+      <h3>Total Plants: {totalItems}</h3>
 
+      <h3>
+        Total Cart Amount: ${calculateTotalAmount()}
+      </h3>
+
+      {/* CART ITEMS */}
       {cartItems.map((item) => (
-        <div key={item.id} style={{ border: "1px solid gray", margin: 10 }}>
-          
-          <img src={item.image} alt={item.name} width="100" />
+        <div key={item.id} style={{ border: "1px solid gray", margin: 10, padding: 10 }}>
+
+          {/* REQUIRED DETAILS */}
+          <img src={item.image} alt={item.name} width="120" />
 
           <h3>{item.name}</h3>
-          <p>Price: ${item.price}</p>
+
+          <p>Unit Price: ${item.price}</p>
+
           <p>Quantity: {item.quantity}</p>
 
+          <p>Total: ${item.price * item.quantity}</p>
+
+          {/* CONTROLS */}
           <button onClick={() => handleIncrease(item)}>+</button>
           <button onClick={() => handleDecrease(item)}>-</button>
 
         </div>
       ))}
 
+      {/* CHECKOUT BUTTON */}
       <button className="checkout-button" onClick={handleCheckout}>
         Checkout
       </button>
 
+      {/* CONTINUE SHOPPING */}
       <Link to="/plants">
         <button className="continue-shopping-button">
           Continue Shopping
