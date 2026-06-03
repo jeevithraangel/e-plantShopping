@@ -1,16 +1,29 @@
-# React + Vite
+# Final Project - Paradise Nursery 🌱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+Paradise Nursery is a React-based web application built using Vite.  
+It is designed to showcase a simple plant nursery shopping experience where users can browse plants and manage selections.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Clean and responsive UI built with React
+- Component-based architecture
+- Fast development using Vite
+- Plant browsing interface
+- Interactive user experience
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5 & CSS3
 
-## React Compiler
+## 📂 Project Structure
+- src/ → Main application source code
+- index.html → Entry point
+- package.json → Project dependencies
+- vite.config.js → Vite configuration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ▶️ How to Run Locally
+```bash
+npm install
+npm run dev
