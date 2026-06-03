@@ -26,10 +26,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<AboutUs />} />
+
         <Route
           path="/plants"
           element={showProducts ? <ProductList /> : <AboutUs />}
         />
+
         <Route path="/cart" element={<CartItem />} />
       </Routes>
     </BrowserRouter>
