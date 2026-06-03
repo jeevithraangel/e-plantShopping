@@ -173,3 +173,9 @@ nav a:hover {
 .cart-item button {
   margin: 5px;
 }
+.background-image {
+  background-image: url("your-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

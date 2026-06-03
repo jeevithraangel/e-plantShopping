@@ -4,7 +4,7 @@ function AboutUs() {
   return (
     <div className="about-us-container">
 
-      <div className="landing-page">
+      <div className="background-image">
 
         <h1>Paradise Nursery</h1>
 
